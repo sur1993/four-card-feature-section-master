@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/sur1993/four-card-feature-section-master.git
+- Live Site URL:  https://sur1993.github.io/four-card-feature-section-master/
 
 ## My process
 
