@@ -1,0 +1,198 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+
+:root {
+  --clr-Red: hsl(0, 78%, 62%);
+  --clr-Cyan: hsl(180, 62%, 55%);
+  --clr-Orange: hsl(34, 97%, 64%);
+  --clr-Blue: hsl(212, 86%, 64%);
+
+  --neutral-700: hsl(234, 12%, 34%);
+  --neutral-400: hsl(229, 6%, 66%);
+  --neutral-200: hsl(0, 0%, 98%);
+
+  --fs-regular: 0.9375rem;
+
+  --ff-primary: 'Poppins';
+  
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+body{
+  background-color: var(--neutral-200);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-400);
+  color: var(--neutral-400);
+}
+
+.grid{
+  display: grid;
+}
+
+.container{
+  padding: 3rem 2.5rem;
+  gap: 3rem;
+  place-items: center;
+}
+
+.container p{
+  font-size: .9rem;
+}
+
+.heading{
+  gap: 1rem;
+}
+
+.heading p{
+  text-align: center;
+}
+
+.heading h1 p{
+  font-size: 1.5rem;
+  font-weight: var(--fw-200);
+  line-height: 1.2;
+}
+
+.heading h1 p span{
+  font-weight: var(--fw-600);
+  color: var(--neutral-700);
+}
+
+.sections{
+  gap: 1.5rem;
+}
+
+.section_item{
+  padding: 1.5rem;
+  border-radius: 6px;
+  gap: 3rem;
+  box-shadow: 0 0 10px var(--neutral-400 );
+}
+
+.section_item h2{
+  font-size: 1.2rem;
+  color: var(--neutral-700);
+}
+
+.section_item p{
+  padding-top: .5rem;
+  font-size: .75rem;
+}
+
+.section_item img{
+  max-height: 3.5rem;
+  justify-self: end;
+}
+
+.section_item[data-item="supervisor"]{
+  border-top: 5px solid var(--clr-Cyan);
+}
+.section_item[data-item="team_builder"]{
+  border-top: 5px solid var(--clr-Red);
+}
+.section_item[data-item="karma"]{
+  border-top: 5px solid var(--clr-Orange);
+}
+.section_item[data-item="calculator"]{
+  border-top: 5px solid var(--clr-Blue);
+}
+
+
+@media (min-width:1000px){
+  .container{
+    padding: 8rem 2.5rem;
+  }
+  .heading{
+    max-width: 500px;
+    place-items: center;
+  }
+  .sections{
+    max-width: 1000px;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(4,1fr);
+  }
+  .section_item[data-item="supervisor"]{
+    grid-column:  1/ span 1;
+    grid-row:  2/ span 2;
+  }
+  .section_item[data-item="team_builder"]{
+    grid-column:  2/ span 1;
+    grid-row:  1/ span 2;
+  }
+  .section_item[data-item="karma"]{
+    grid-column:  2/ span 1;
+    grid-row:  3/ span 2;
+  }
+  .section_item[data-item="calculator"]{
+    grid-column:  3/ span 1;
+    grid-row:  2/ span 2;
+  }
+}
+
+
+ 
+
+
+
+
